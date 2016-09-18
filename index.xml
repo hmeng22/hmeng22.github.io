@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hmeng22</title>
+    <link>http://hmeng22.github.io/hmeng22.github.io/</link>
+    <description>Recent content on hmeng22</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>youremail@domain.com (hmeng22)</managingEditor>
+    <webMaster>youremail@domain.com (hmeng22)</webMaster>
+    <lastBuildDate>Sat, 17 Sep 2016 23:52:52 -0400</lastBuildDate>
+    <atom:link href="http://hmeng22.github.io/hmeng22.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First Post!</title>
+      <link>http://hmeng22.github.io/hmeng22.github.io/post/firstPost/</link>
+      <pubDate>Sat, 17 Sep 2016 23:52:52 -0400</pubDate>
+      <author>youremail@domain.com (hmeng22)</author>
+      <guid>http://hmeng22.github.io/hmeng22.github.io/post/firstPost/</guid>
+      <description>&lt;p&gt;Here is the first post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://hmeng22.github.io/hmeng22.github.io/img.png&#34; alt=&#34;img.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://hmeng22.github.io/hmeng22.github.io/about/</link>
+      <pubDate>Sat, 17 Sep 2016 23:49:34 -0400</pubDate>
+      <author>youremail@domain.com (hmeng22)</author>
+      <guid>http://hmeng22.github.io/hmeng22.github.io/about/</guid>
+      <description>&lt;p&gt;hmeng22.github.io&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
