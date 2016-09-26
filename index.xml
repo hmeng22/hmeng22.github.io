@@ -6,8 +6,8 @@
     <description>Recent content on hmeng22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>youremail@domain.com (hmeng22)</managingEditor>
-    <webMaster>youremail@domain.com (hmeng22)</webMaster>
+    <managingEditor>hmeng22@uwo.com (hmeng22)</managingEditor>
+    <webMaster>hmeng22@uwo.com (hmeng22)</webMaster>
     <lastBuildDate>Mon, 26 Sep 2016 19:08:32 -0400</lastBuildDate>
     <atom:link href="//hmeng22.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>caffe</title>
       <link>//hmeng22.github.io/post/caffe/</link>
       <pubDate>Mon, 26 Sep 2016 19:08:32 -0400</pubDate>
-      <author>youremail@domain.com (hmeng22)</author>
+      <author>hmeng22@uwo.com (hmeng22)</author>
       <guid>//hmeng22.github.io/post/caffe/</guid>
       <description>
 
@@ -250,7 +250,7 @@ echo &amp;quot;export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/
       <title>First Post!</title>
       <link>//hmeng22.github.io/post/firstPost/</link>
       <pubDate>Sat, 17 Sep 2016 23:52:52 -0400</pubDate>
-      <author>youremail@domain.com (hmeng22)</author>
+      <author>hmeng22@uwo.com (hmeng22)</author>
       <guid>//hmeng22.github.io/post/firstPost/</guid>
       <description>&lt;p&gt;Here is the first post.&lt;/p&gt;
 
@@ -262,7 +262,7 @@ echo &amp;quot;export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/
       <title>Me__.</title>
       <link>//hmeng22.github.io/me/</link>
       <pubDate>Sat, 17 Sep 2016 23:49:34 -0400</pubDate>
-      <author>youremail@domain.com (hmeng22)</author>
+      <author>hmeng22@uwo.com (hmeng22)</author>
       <guid>//hmeng22.github.io/me/</guid>
       <description>&lt;p&gt;hmeng22.github.io&lt;/p&gt;
 </description>
