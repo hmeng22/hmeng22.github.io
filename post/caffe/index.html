@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>caffe</title>
+
+  <meta name="author" content="hmeng22" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.16" />
+
+  <link rel="alternate" href="//hmeng22.github.io/index.xml" type="application/rss+xml" title="hmeng22">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="//hmeng22.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//hmeng22.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="//hmeng22.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="caffe" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="img/avatar-icon.png" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="//hmeng22.github.io/">hmeng22</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Blog" href="/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="About" href="/about">About</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+          <a title="hmeng22" href="//hmeng22.github.io/">
+              <img class="avatar-img" src="//hmeng22.github.io/img/avatar-icon.png" alt="hmeng22" />
+          </a>
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>caffe</h1>
+      
+      
+      
+      <span class="post-meta">Posted on September 26, 2016</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          
+
+<h1 id="caffe">Caffe</h1>
+
+<p><a href="http://caffe.berkeleyvision.org/">Caffe</a> is a Deep Learning framework by Berkeley Vision and Learning Center(BVLC) and by community contributors.
+<a href="http://daggerfs.com/">Yangqing Jia</a> created the project during his PhD at UC Berkeley. Caffe is released under the <a href="https://github.com/BVLC/caffe/blob/master/LICENSE">BSD 2-Clause license</a>.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Deep Learning &hellip;</p>
+
+<p>I am a fresh man in Deep Learning filed, so maybe Caffe is a good start for the first lesson. I encountered so many issues when I was trying to install Caffe which cost me a lot of time to find the correct solutions. Thanks to the Internet, finally I get it right. The following records my notes and how did I install it on a Mac.</p>
+
+<p>Since I am new, most of the libraries are brand-new to me. I also add some descriptions and introduction about these parts.
+You can go directly to <a href="/">Installation</a> if you are already familiar with these stuff and just want to install Caffe.</p>
+
+<p>Caffe offers some installation instructions at <a href="http://caffe.berkeleyvision.org/installation.html">here</a>. However, I cannot install it successfully just following this instructions. Anyway, we have to read it first before we start to do anything.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>Caffe has several dependencies : CUDA, BLAS, Boost and some libraries. Also some dependencies are optional : OpenCV, IO libraries, cuDNN.</p>
+
+<h2 id="cuda">CUDA</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/CUDA">CUDA</a> is a parallel computing platform and API model created by Nvidia. It allows developers to use CUDA-enabled GPU for processing. This is all I want to know.</p>
+
+<p>It will not work if you install CUDA driver through CUDA Toolkit. You have to download and install the right CUDA driver from <a href="http://www.nvidia.com/object/mac-driver-archive.html">here</a>. I&rsquo;m using CUDA 7.5.30 driver for MAC.</p>
+
+<p>Library version 7+ are recommended. If you have a issue &lsquo;CUDA driver version is insufficient for CUDA runtime version&rsquo;. That might be caused by the CUDA driver</p>
+
+<h2 id="blas">BLAS</h2>
+
+<p>Basic Linear Algebra Subprograms(BLAS) is a specification that prescribes a set of low-level routines for performing common linear algebra operations.</p>
+
+<p>Three libraries are recommedned : ATLAS, MKL or OpenBLAS.</p>
+
+<p>Caffe uses ATLAS as default. Intel Math kernel Library(MKL) is optimized for Intel. It is said MKL will be faster. OpenBLAS is an open source implementation with many hand-crafted optimizations for specific processor types.</p>
+
+<p>I just use default ATLAS. Everthing is fine just leave this part alone there.</p>
+
+<h2 id="boost">Boost</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Boost_(C%2B%2B_libraries)#License">Boost</a> is a set of libraries for the C++ that provide support for tasks and structures. It contains over 80 individual libraries. Most of the Boost libraries are licensed under the Boost Software License, designed to allow Boost to be used with both free and proprietary software projects.</p>
+
+<h2 id="other-libraries">Other libraries</h2>
+
+<p>protobuf, glog, gflags, hdf5</p>
+
+<p>OpenCV, lmdb, leveldb, snappy</p>
+
+<h2 id="cudnn">cuDNN</h2>
+
+<p>cuDNN for GPU acceleration. The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks.</p>
+
+<p>You can enable this in the Makefile.config, if the server has a GPU and cudnn installed.</p>
+
+<h2 id="anaconda">Anaconda</h2>
+
+<p>They suggested to use Anaconda Python distribution. Don&rsquo;t do that.</p>
+
+<p>Usually Anaconda will be installed at ~/anaconda. It requires to use ~/anaconda/bin/python or ~/anaconda/bin/ipython to install related Python packages. You have to change the environment before doing that. Apparently it is much easier to use Homerbrew.</p>
+
+<p>Thanks to <a href="https://github.com/rainyear/lolita/issues/10">this</a>.</p>
+
+<h1 id="caffe-os-x-installation">Caffe OS X installation</h1>
+
+<blockquote>
+<p>Operating System : OS X EI Capitan Version 10.11.5
+Graphics : Intel Iris Pro Graphics 6200 1536 MB
+Processor : 3.1 GHz Intel Core i5</p>
+</blockquote>
+
+<pre><code class="language-sh"># Install brew
+/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+
+# Install XCode
+# Install XCode command line tools
+xcode-select --install
+
+
+# Only do this part if you need to use GPU
+# Install CUDA toolkit 7.5
+# Install CUDA driver
+# Only do this part after CUDA if you need to use cuDNN
+# download cudnn-x.x-osx-x64.tar
+sudo tar -xzvf cudnn-x.x-osx-x64.tar /Developer/NVIDIA/CUDA-7.5/
+sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn.dylib /usr/local/cuda/lib/libcudnn.dylib
+sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn.5.dylib /usr/local/cuda/lib/libcudnn.5.dylib
+sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn_static.a /usr/local/cuda/lib/libcudnn_static.a
+sudo ln -s /Developer/NVIDIA/CUDA-8.0/include/cudnn.h /usr/local/cuda/include/cudnn.h
+# Not sure about this part. This is from https://gist.github.com/doctorpangloss/f8463bddce2a91b949639522ea1dcbe4 . And you can find this link in  https://github.com/BVLC/caffe/wiki/Installation-(OSX)
+
+
+
+# Install dependencies using brew
+brew install -vd snappy leveldb gflags glog szip lmdb
+# need the homebrew science source for OpenCV and hdf5
+brew tap homebrew/science
+brew install hdf5 opencv
+brew upgrade libpng
+
+# with Python pycaffe needs dependencies built from source
+brew install --build-from-source --with-python -vd protobuf
+brew install --build-from-source -vd boost boost-python
+
+# using brew python &amp; numpy
+brew install python numpy
+
+
+
+# Clone the caffe repo
+cd ~/Documents
+git clone https://github.com/BVLC/caffe.git
+
+cp Makefile.config.example Makefile.config
+# config Makefile.config based on your needs
+CPU_ONLY := 1
+
+# the brew numpy path
+PYTHON_INCLUDE := /usr/include/python2.7 \
+  /usr/local/Cellar/numpy/1.11.1/lib/python2.7/site-packages/numpy/core/include
+
+# the brew python path
+PYTHON_LIB := /usr/local/Cellar/python/2.7.12/Frameworks/Python.framework/Versions/2.7/lib
+
+
+
+# make
+make -j8 all
+make -j8 test
+make runtest
+
+
+
+# make pycaffe
+for req in $(cat python/requirements.txt); do pip install $req; done
+
+make -j8 pytest
+make pycaffe
+make distribute
+
+
+
+# add PYTHONPATH into .bash_profile
+echo &quot;export PYTHONPATH=/path to your caffe/python:$PYTHONPATH&quot; &gt;&gt; ~/.bash_profile
+source ~/.bash_profile
+
+# Verify that everything works
+python -c 'import caffe'
+python -c &quot;import caffe;print caffe.__version__&quot;
+</code></pre>
+
+<h1 id="caffe-test">Caffe Test</h1>
+
+<p><a href="http://stackoverflow.com/questions/29658790/how-to-test-mnist-on-my-own-dataset-images">StackOverFlow</a>
+<a href="/7.png">7.png</a></p>
+
+<pre><code>import os
+import sys
+
+import caffe
+
+model_file = './lenet.prototxt'
+pretrained_file = './lenet_iter_10000.caffemodel'
+net = caffe.Classifier(model_file, pretrained_file, image_dims=(28, 28), raw_scale=255)
+score = net.predict([caffe.io.load_image('./7.png', color=False)], oversample=False)
+print score
+</code></pre>
+
+<h1 id="some-useful-posts">Some useful posts</h1>
+
+<ol>
+<li><a href="https://github.com/rainyear/lolita/issues/10">Deepdream(Caffe-python)</a></li>
+</ol>
+
+<h1 id="problems">Problems</h1>
+
+<h2 id="using-different-python">Using different python</h2>
+
+<pre><code># check which python you are using
+$ which python
+$ which pip
+# Normally brew will use /usr/local/bin/ . built-in is /usr/bin
+
+# check /etc/paths
+$ cat /etc/paths
+/usr/local/bin  
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+</code></pre>
+
+<h2 id="numpy-not-found">numpy not found</h2>
+
+<pre><code>import numpy as np
+np.get_include()
+
+# replace the numpy path
+PYTHON_INCLUDE := /usr/include/python2.7 \
+		/usr/local/Cellar/numpy/1.11.1/lib/python2.7/site-packages/numpy/core/include
+
+THe Homebrew numpy is recommended.
+</code></pre>
+
+<h2 id="reason-image-not-found">Reason: image not found</h2>
+
+<pre><code>Referenced from: /Users/.../Code/caffe_FCN/python/caffe/_caffe.so
+
+Reason: image not found
+</code></pre>
+
+<ul>
+<li>Solution
+<code>
+$ echo &quot;export PYTHONPATH=/your path to caffe/python:$PYTHONPATH&quot; &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
+</code></li>
+</ul>
+
+<h2 id="library-path">Library Path</h2>
+
+<pre><code>echo &quot;export PATH=/usr/local/cuda/bin:$PATH&quot; &gt;&gt; ~/.bash_profile
+echo &quot;export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH&quot; &gt;&gt; ~/.bash_profile
+echo &quot;export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/lib:/usr/lib:$DYLD_FALLBACK_LIBRARY_PATH&quot; &gt;&gt; ~/.bash_profile
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="//hmeng22.github.io/post/firstPost/" data-toggle="tooltip" data-placement="top" title="First Post!">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/username" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="mailto:youremail@domain.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://linkedin.com/pub/username/X/YYY/ZZZ" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          <li>
+            <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+
+    		  <li>
+      			<a href="//hmeng22.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>
+
+        </ul>
+        
+        <br />
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="//hmeng22.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="//hmeng22.github.io/js/bootstrap.min.js"></script>
+<script src="//hmeng22.github.io/js/main.js"></script>
+
+
+
+
+  </body>
+</html>
