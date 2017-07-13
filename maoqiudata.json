@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
     IMDATADONTUSEMYNAME = {
       "player": ['Hua', 'NoMoon', 'Winnie', 'DanFeng', 'XinZe', 'Cannon', 'Chang'],
       "topup": [{
@@ -53,4 +53,3 @@
         }]
       }]
     }
-  </script>
