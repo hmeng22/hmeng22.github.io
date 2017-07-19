@@ -112,11 +112,11 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "NoMoon",
-        "number": 1
+        "number": 0
       },
       {
         "name": "Winnie",
-        "number": 2
+        "number": 0
       },
       {
         "name": "DanFeng",
@@ -124,7 +124,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "XinZe",
-        "number": 1
+        "number": 0
       },
       {
         "name": "Cannon",
