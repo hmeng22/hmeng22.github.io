@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>羽毛Qiuuuuuuuuuuu</title>
+  <title>羽毛球</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     </tbody>
   </table>
 
-<!--   <script type="text/javascript">
+  <!-- <script type="text/javascript">
     IMDATADONTUSEMYNAME = {
       "player": ['Hua', 'NoMoon', 'Winnie', 'DanFeng', 'XinZe', 'Cannon', 'Chang'],
       "topup": [{
@@ -89,7 +89,7 @@
     }
   </script> -->
   <script type="text/javascript" src="./maoqiudata.json"></script>
-  
+
   <script type="text/javascript">
     console.log(IMDATADONTUSEMYNAME);
 
@@ -122,7 +122,6 @@
       topupRow.appendChild(topupPlayerCol);
       topupRow.id = 'topup' + player[i];
       topupTableBody.appendChild(topupRow);
-
 
       var activityPlayerCol = document.createElement("td");
       activityPlayerCol.innerHTML = player[i];
@@ -177,6 +176,11 @@
       }
     }
 
+    // set up balance = total
+    for (var i = 0; i < playerLength; i++) {
+      playerBalance[player[i]] = playerTotal[player[i]];
+    }
+
     // activity
     for (var i = 0; i < activityLength; i++) {
       var date = document.createElement("th");
@@ -214,32 +218,27 @@
 
       // playerBalance
       for (var j = 0; j < valuesLength; j++) {
-        playerBalance[activity[i].values[j].name] = playerTotal[activity[i].values[j].name] - costPer * activity[i].values[j].number;
+        playerBalance[activity[i].values[j].name] -= costPer * activity[i].values[j].number;
       }
     }
 
-
     // display playerTotal && playerBalance
-    for (var i = 0; i < topupLength; i++) {
-      var total = document.createElement("th");
-      total.innerHTML = "总计";
-      topupTableDate.appendChild(total);
+    var total = document.createElement("th");
+    total.innerHTML = "总计";
+    topupTableDate.appendChild(total);
 
-      var total = document.createElement("th");
-      total.innerHTML = "余额";
-      topupTableDate.appendChild(total);
+    var total = document.createElement("th");
+    total.innerHTML = "余额";
+    topupTableDate.appendChild(total);
+    for (var i = 0; i < playerLength; i++) {
+      var row = document.getElementById('topup' + player[i]);
+      var totalCol = document.createElement("td");
+      totalCol.innerHTML = playerTotal[player[i]];
+      row.appendChild(totalCol);
 
-      var valuesLength = topup[i].values.length;
-      for (var j = 0; j < valuesLength; j++) {
-        var row = document.getElementById('topup' + topup[i].values[j].name)
-        var totalCol = document.createElement("td");
-        totalCol.innerHTML = playerTotal[topup[i].values[j].name];
-        row.appendChild(totalCol);
-
-        var balanceCol = document.createElement("td");
-        balanceCol.innerHTML = playerBalance[topup[i].values[j].name];
-        row.appendChild(balanceCol);
-      }
+      var balanceCol = document.createElement("td");
+      balanceCol.innerHTML = playerBalance[player[i]];
+      row.appendChild(balanceCol);
     }
   </script>
 
