@@ -32,62 +32,6 @@
     </tbody>
   </table>
 
-  <!-- <script type="text/javascript">
-    IMDATADONTUSEMYNAME = {
-      "player": ['Hua', 'NoMoon', 'Winnie', 'DanFeng', 'XinZe', 'Cannon', 'Chang'],
-      "topup": [{
-        "date": "2017-07-18",
-        "values": [{
-          "name": "Hua",
-          "amount": 40
-        }, {
-          "name": "NoMoon",
-          "amount": 0
-        }, {
-          "name": "Winnie",
-          "amount": 0
-        }, {
-          "name": "DanFeng",
-          "amount": 0
-        }, {
-          "name": "XinZe",
-          "amount": 0
-        }, {
-          "name": "Cannon",
-          "amount": 0
-        }, {
-          "name": "Chang",
-          "amount": 0
-        }]
-      }],
-      "activity": [{
-        "date": "2017-07-18",
-        "total": 40,
-        "values": [{
-          "name": "Hua",
-          "number": 2
-        }, {
-          "name": "NoMoon",
-          "number": 1
-        }, {
-          "name": "Winnie",
-          "number": 3
-        }, {
-          "name": "DanFeng",
-          "number": 1
-        }, {
-          "name": "XinZe",
-          "number": 1
-        }, {
-          "name": "Cannon",
-          "number": 1
-        }, {
-          "name": "Chang",
-          "number": 1
-        }]
-      }]
-    }
-  </script> -->
   <script type="text/javascript" src="./maoqiudata.json"></script>
 
   <script type="text/javascript">
@@ -115,6 +59,13 @@
 
 
     // add 1st column Name
+    var topupFundCol = document.createElement("td");
+    topupFundCol.innerHTML = '*Fund*';
+    var fundRow = document.createElement("tr");
+    fundRow.appendChild(topupFundCol);
+    fundRow.id = 'topup' + 'Fund';
+    topupTableBody.appendChild(fundRow);
+
     for (var i = 0; i < playerLength; i++) {
       var topupPlayerCol = document.createElement("td");
       topupPlayerCol.innerHTML = player[i];
@@ -174,13 +125,25 @@
         // calculate playerTotal
         playerTotal[topup[i].values[j].name] += topup[i].values[j].amount;
       }
+
+      var fundCol = document.createElement("td");
+      fundCol.innerHTML = '-';
+      fundRow.appendChild(fundCol);
     }
+
 
     // set up balance = total
+    // set up fundTotal
+    var fundTotal = 0;
     for (var i = 0; i < playerLength; i++) {
       playerBalance[player[i]] = playerTotal[player[i]];
+      fundTotal += playerTotal[player[i]];
     }
+    var fundTotalCol = document.createElement("td");
+    fundTotalCol.innerHTML = fundTotal;
+    fundRow.appendChild(fundTotalCol);
 
+    var fundSpend = 0;
     // activity
     for (var i = 0; i < activityLength; i++) {
       var date = document.createElement("th");
@@ -220,7 +183,12 @@
       for (var j = 0; j < valuesLength; j++) {
         playerBalance[activity[i].values[j].name] -= costPer * activity[i].values[j].number;
       }
+
+      fundSpend += activity[i].total;
     }
+    var fundBalanceCol = document.createElement("td");
+    fundBalanceCol.innerHTML = fundTotal - fundSpend;
+    fundRow.appendChild(fundBalanceCol);
 
     // display playerTotal && playerBalance
     var total = document.createElement("th");
