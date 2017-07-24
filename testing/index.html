@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> | hmeng22</title>
+<link rel="stylesheet" href="//hmeng22.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="//hmeng22.github.io/"><h1 class="title is-4">hmeng22</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/tanksuzuki">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 1, 0001</h2>
+    <h1 class="title"></h1>
+    <div class="content">
+      
+
+<h2 id="tdd-vs-bdd">TDD vs BDD</h2>
+
+<p>Test-driven development (TDD) which means you write your tests before your code, is one of the main, agile development techniques. The genius of TDD lies in increased quality of code, faster development resulting from greater programmer confidence, and improved bug detection. (with assert)</p>
+
+<p>Behavior-driven development (BDD) encourages collaboration between product owners and programmers. (with expect)</p>
+
+<h2 id="tools">Tools</h2>
+
+<h4 id="test-runner">Test Runner</h4>
+
+<p><strong>Karma</strong> is a browser test runner which creates a fake server to load tests files, run them and report results. It requires a testing framework such as Jasmine to plug into it in order to actually run <strong><em>specs</em></strong> and determine whether any given condition is valid or not.</p>
+
+<h4 id="testing-framework-and-assertion-library">Testing Framework and Assertion Library</h4>
+
+<p>Methods outside the <strong><em>it</em></strong> block are generally derived from the testing framework. Everything within <strong><em>it</em></strong> block is code from the assertion library. <strong><em>beforeEach</em></strong>, <strong><em>describe</em></strong>, <strong><em>it</em></strong> are all methods extending from Testing Framework such as <strong>Mocha</strong>. <strong><em>expect</em></strong>, <strong><em>equal</em></strong> are all methods from Assertion Library such as <strong>Chai</strong> (or from a testing plugin such as <strong>Sinon</strong>).</p>
+
+<h4 id="suite-spec-expectation">Suite &amp; Spec &amp; Expectation</h4>
+
+<p>A <strong>Suite</strong> begins with a call to the global function <strong><em>describe</em></strong> with two parameters : a string and a function.</p>
+
+<p>A <strong>Spec</strong> is defined by calling the global function <strong><em>it</em></strong> with two parameters : a string and a function.</p>
+
+<p>An <strong>Expectation</strong> is built with the function <strong><em>expect</em></strong> which takes a value, called the actual. It is chained with a Matcher function, which takes the expected value.</p>
+
+<h2 id="jasmine-2-vs-mocha-chai">Jasmine 2 vs Mocha + Chai</h2>
+
+<p>The APIs of Jasmine and Mocha are very similar where you write your test suite with <em>describe</em> blocks and each test, also called a spec, using the <em>it</em> function.</p>
+
+<pre><code class="language-javascript">describe('describe name', function() {
+  it('should name', function() {
+    // assertions or expectations here
+  })
+})
+</code></pre>
+
+<ul>
+<li>Mocha does not have a built in assertion library. Most developers choose <strong>Chai</strong> as their assertion library. Chai has 3 different assertion flavours : the <em>should</em> style, the <em>expect</em> style, and the <em>assert</em> style.</li>
+<li>Chai&rsquo;s <em>expect</em> style is similar to what Jasmine provides.</li>
+</ul>
+
+<pre><code class="language-javascript">Jasmine
+expect(calculator.add(1, 1)).toEqual(2);
+
+Chai
+expect(calculator.add(1, 1)).to.equal(2);
+</code></pre>
+
+<ul>
+<li>Both Jasmine and Mocha use <em>describe()</em> and <em>it()</em> functions.</li>
+<li>Spies or Test Doubles. Mocha does not come with a test double library, you will need to load in <strong>Sinon</strong>.</li>
+</ul>
+
+<pre><code class="language-javascript">Jasmine
+var userSaveSpy = spyOn(User.prototype, 'save');
+var spy = jasmine.createSpy();
+</code></pre>
+
+<ul>
+<li>Asynchronous Testing. The same.</li>
+<li>Running Tests. Mocha comes with a command line utility that you can use to run tests. Jasmine does not have a command line utility to run test, use Karma.</li>
+</ul>
+
+<pre><code>mocha testsDirectory --recursive --watch
+</code></pre>
+
+<h4 id="conculusion">Conculusion</h4>
+
+<p>Either Jasmine with Karma or Mocha with Chai  (chai-http is used to make requests to test RESTful APIs), Sion.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/hmeng22">hmeng22</a> 2017</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/markdown.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

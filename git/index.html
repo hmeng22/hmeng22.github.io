@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> | hmeng22</title>
+<link rel="stylesheet" href="//hmeng22.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="//hmeng22.github.io/"><h1 class="title is-4">hmeng22</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/tanksuzuki">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 1, 0001</h2>
+    <h1 class="title"></h1>
+    <div class="content">
+      
+
+<h2 id="git">Git</h2>
+
+<pre><code>$ git --version
+
+--global setting
+$ git config --global user.name &quot;yourusername&quot;
+$ git config --global user.email &quot;youremail&quot;
+$ git config --list
+
+--init
+$ git init
+$ git clone url
+$ git log
+$ git reflog (any change update the HEAD)
+</code></pre>
+
+<pre><code>--branch
+$ git branch -a
+$ git checkout -b newBranch
+$ git checkout branchNameSwitchingTo
+$ git branck -d branchNameDeleted
+$ git push origin branchNamePushed
+$ git merge branchNameMerged
+</code></pre>
+
+<pre><code>--local
+$ git status
+$ git add .
+$ git rm .
+$ git commit -m &quot;comments&quot;
+
+--remote
+$ git remove -v
+
+$ git remote add origin url
+$ git remove show origin
+$ git remove rm origin
+
+$ git push origin masterOrBranchName
+$ git pull
+$ git fetch origin masterOrBranchName
+</code></pre>
+
+<pre><code>--revert &amp; reset
+
+revert	: 撤销某次操作，此次操作之前的commit都会被保留.
+		: 用一次新的commit来回滚之前的commit.
+reset	: 撤销某次提交，但是此次之后的修改都会被退回到暂存区.
+		: 直接删除指定的commit.
+		
+还没push
+	git reset --mixed 保留源码,只是将git commit和index 信息回退到了某个版本.
+	git reset --soft  保留源码,只回退到commit 信息到某个版本.如果还需要提交,直接commit即可.
+	git reset --hard  源码也会回退到某个版本,commit和index 都回回退到某个版本.
+	git reset --hard origin/master 将本地的状态回退到和远程的一样.
+
+已经push
+	git revert	用一个新提交来消除一个历史提交所做的任何修改.
+</code></pre>
+
+<pre><code>--working trees
+
+Say you have this, where C is your HEAD and (F) is the state of your files.
+
+   (F)
+A-B-C
+    ↑
+  master
+  
+git reset --hard HEAD~1
+
+ (F)
+A-B
+  ↑
+master
+
+Revert commit, resulting in a linear commit history
+git revert C
+
+     (F)
+A-B-C-D
+      ↑
+    master
+    
+Where the file tree of D is identical to B
+
+
+# This saves the modifications, then reapplies that patch after resetting.
+git stash
+git reset --hard xxxxxx
+git stash pop
+</code></pre>
+
+<pre><code>--
+$ git rm $(git ls-files --deleted)
+</code></pre>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/hmeng22">hmeng22</a> 2017</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/markdown.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
