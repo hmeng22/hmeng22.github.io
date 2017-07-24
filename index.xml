@@ -23,43 +23,5 @@ Introduction You can go directly to Installation if you are already familiar wit
 Caffe offers some installation instructions at here. However, I cannot install it successfully just following this instructions.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>//hmeng22.github.io/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//hmeng22.github.io/git/</guid>
-      <description>Git $ git --version --global setting $ git config --global user.name &amp;quot;yourusername&amp;quot; $ git config --global user.email &amp;quot;youremail&amp;quot; $ git config --list --init $ git init $ git clone url $ git log $ git reflog (any change update the HEAD)  --branch $ git branch -a $ git checkout -b newBranch $ git checkout branchNameSwitchingTo $ git branck -d branchNameDeleted $ git push origin branchNamePushed $ git merge branchNameMerged  --local $ git status $ git add .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>//hmeng22.github.io/gulp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//hmeng22.github.io/gulp/</guid>
-      <description>Gulp gulpfile.js var gulp = require(&#39;gulp&#39;), sass = require(&#39;gulp-ruby-sass&#39;), autoprefixer = require(&#39;gulp-autoprefixer&#39;), minifycss = require(&#39;gulp-minify-css&#39;), jshint = require(&#39;gulp-jshint&#39;), uglify = require(&#39;gulp-uglify&#39;), rename = require(&#39;gulp-rename&#39;), concat = require(&#39;gulp-concat&#39;), imagemin = require(&#39;gulp-imagemin&#39;), livereload = require(&#39;gulp-livereload&#39;), cache = require(&#39;gulp-cache&#39;), notify = require(&#39;gulp-notify&#39;), del = require(&#39;del&#39;); // sass : $ gulp styles gulp.task(&#39;styles&#39;, function() { return gulp.src(&#39;src/styles/main.scss&#39;) .pipe(sass({ style: &#39;expanded&#39; })) .pipe(autoprefixer(&#39;last 2 version&#39;)) .pipe(gulp.dest(&#39;path/to/css&#39;)) .pipe(rename({suffix: &#39;.min&#39;})) .pipe(minifycss()) .pipe(gulp.dest(&#39;dist/assets/css&#39;)) .pipe(notify({ message: &#39;Styles task complete&#39; })); }); // JSHint : $ gulp scripts gulp.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>//hmeng22.github.io/regex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//hmeng22.github.io/regex/</guid>
-      <description> Regular Expression 圆括号 &amp;quot;()&amp;quot; 分组 方括号 &amp;quot;[]&amp;quot; 匹配字符 花括号 &amp;quot;{}&amp;quot; 匹配字符的数量 插入符 &amp;quot;^&amp;quot; 开始 美元符 &amp;quot;$&amp;quot; 结束  .	除换行符以外任意单字符 a|b	a or b *	0 or more times +	at least 1 time ?	0 or 1 time {n}	more than n times {n, m}	between n and m times     Reg       \d [0-9] Digit   \D [^0-9] Non-digit   \s [\s\t\r\n\f] Whitespace   \S [^\s\t\r\n\f] Non-Whitespace   \w [A-Za-z0-9] Word   \W [^A-Za-z0-9] Non-word    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>//hmeng22.github.io/testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//hmeng22.github.io/testing/</guid>
-      <description>TDD vs BDD Test-driven development (TDD) which means you write your tests before your code, is one of the main, agile development techniques. The genius of TDD lies in increased quality of code, faster development resulting from greater programmer confidence, and improved bug detection. (with assert)
-Behavior-driven development (BDD) encourages collaboration between product owners and programmers. (with expect)
-Tools Test Runner Karma is a browser test runner which creates a fake server to load tests files, run them and report results.</description>
-    </item>
-    
   </channel>
 </rss>
