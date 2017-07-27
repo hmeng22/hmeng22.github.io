@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//hmeng22.github.io/raid/</loc>
+    <lastmod>2017-07-25T08:05:51-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//hmeng22.github.io/testing/</loc>
     <lastmod>2017-07-24T18:09:04-04:00</lastmod>
   </url>
@@ -39,7 +44,7 @@
   
   <url>
     <loc>//hmeng22.github.io/</loc>
-    <lastmod>2017-07-24T18:09:04-04:00</lastmod>
+    <lastmod>2017-07-25T08:05:51-04:00</lastmod>
     <priority>0</priority>
   </url>
   

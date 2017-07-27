@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/hmeng22&#34;&gt;hmeng22&lt;/a&gt; 2017</copyright>
-    <lastBuildDate>Mon, 24 Jul 2017 18:09:04 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jul 2017 08:05:51 -0400</lastBuildDate>
     
 	<atom:link href="//hmeng22.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Raid</title>
+      <link>//hmeng22.github.io/raid/</link>
+      <pubDate>Tue, 25 Jul 2017 08:05:51 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/raid/</guid>
+      <description> RAID Redundant Array of Independent Disks (RAID) 独立硬盘冗余阵列.
+RAID 0  RAID 0 |--------------| A1 A2 A3 A4 A5 A6 Disk 0 Disk 1  RAID 1  RAID 1 |--------------| A1 A1 A2 A2 A3 A3 Disk 0 Disk 1  RAID 5  RAID 5 (at least 3 disks) |--------------|--------------|--------------| A1 A2 A3 Ap B1 B2 Bp B4 C1 Cp C3 C4 Dp D2 D3 D4 Disk 0 Disk 1 Disk 2 Disk 3  RAID 01  RAID 1 |----------------------------| RAID 0 RAID 0 |--------------| |--------------| A1 A2 A1 A2 A3 A4 A3 A4 A5 A6 A5 A6 Disk 0 Disk 1 Disk 2 Disk 3  RAID 10  RAID 0 |----------------------------| RAID 1 RAID 1 |--------------| |--------------| A1 A1 A2 A2 A3 A3 A4 A4 A5 A5 A6 A6 Disk 0 Disk 1 Disk 2 Disk 3  </description>
+    </item>
     
     <item>
       <title>Testing</title>
