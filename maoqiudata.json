@@ -47,11 +47,11 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "NoMoon",
-        "amount": 0
+        "amount": 5
       },
       {
         "name": "Winnie",
-        "amount": 0
+        "amount": 20
       },
       {
         "name": "DanFeng",
@@ -112,7 +112,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "NoMoon",
-        "number": 0
+        "number": 1
       },
       {
         "name": "Winnie",
@@ -124,7 +124,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "XinZe",
-        "number": 1
+        "number": 0
       },
       {
         "name": "Cannon",
