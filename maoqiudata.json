@@ -10,7 +10,7 @@ IMDATADONTUSEMYNAME = {
   ],
   "topup": [{
     "date": "2017-07-18",
-    "values": [{
+      "values": [{
         "name": "Hua",
         "amount": 40
       },
@@ -82,7 +82,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "Winnie",
-        "amount": 0
+        "amount": 20
       },
       {
         "name": "DanFeng",
@@ -90,7 +90,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "XinZe",
-        "amount": 0
+        "amount": 10
       },
       {
         "name": "Cannon",
@@ -187,7 +187,7 @@ IMDATADONTUSEMYNAME = {
       },
       {
         "name": "XinZe",
-        "number": 0
+        "number": 1
       },
       {
         "name": "Cannon",
