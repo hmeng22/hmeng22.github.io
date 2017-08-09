@@ -10,7 +10,7 @@ IMDATADONTUSEMYNAME = {
   ],
   "topup": [{
     "date": "2017-07-18",
-      "values": [{
+    "values": [{
         "name": "Hua",
         "amount": 40
       },
@@ -91,6 +91,37 @@ IMDATADONTUSEMYNAME = {
       {
         "name": "XinZe",
         "amount": 10
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-08",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 6
+      },
+      {
+        "name": "Winnie",
+        "amount": 20
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 6
       },
       {
         "name": "Cannon",
@@ -176,6 +207,38 @@ IMDATADONTUSEMYNAME = {
       {
         "name": "NoMoon",
         "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-08",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 2
       },
       {
         "name": "Winnie",
