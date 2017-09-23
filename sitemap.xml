@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//hmeng22.github.io/knapsackproblems/</loc>
+    <lastmod>2017-07-28T18:33:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/2arrays/</loc>
+    <lastmod>2017-07-28T17:42:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/auth/</loc>
+    <lastmod>2017-07-27T18:14:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/jsprototype/</loc>
+    <lastmod>2017-07-26T17:45:18-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/latex/</loc>
+    <lastmod>2017-07-25T08:12:05-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//hmeng22.github.io/raid/</loc>
     <lastmod>2017-07-25T08:05:51-04:00</lastmod>
   </url>
@@ -44,7 +69,7 @@
   
   <url>
     <loc>//hmeng22.github.io/</loc>
-    <lastmod>2017-07-25T08:05:51-04:00</lastmod>
+    <lastmod>2017-07-28T18:33:35-04:00</lastmod>
     <priority>0</priority>
   </url>
   
