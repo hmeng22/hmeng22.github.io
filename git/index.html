@@ -140,6 +140,16 @@ git stash pop
 $ git rm $(git ls-files --deleted)
 </code></pre>
 
+<pre><code>local :
+git branch -f main side
+git rebase -i
+git rebase base side
+git cherry-pick B1 B2 B3
+
+remote :
+git pull --rebase
+</code></pre>
+
     </div>
   </div>
 </section>
