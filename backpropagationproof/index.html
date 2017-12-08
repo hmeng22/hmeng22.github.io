@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BackPropagationProof | hmeng22</title>
+<link rel="stylesheet" href="//hmeng22.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="//hmeng22.github.io/"><h1 class="title is-4">hmeng22</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/hmeng22">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">December 7, 2017</h2>
+    <h1 class="title">BackPropagationProof</h1>
+    <div class="content">
+      <p>$$w_{ji}^l$$ Weight from the i neuron in the l-1 layer to the j neuron in the l layer. <br />
+$$b_j^l$$ Bias from the j neuron in the l layer. \</p>
+
+<p>$$a_j^l$$ Activation from the j neuron in the l layer. <br />
+$$a<em>j^l = \sum</em>{i} w_{ji}^l a_i^{l-1} + b_j^l = \sigma(z_j^l)$$ <br />
+$$a^l = w^l a^{l-1} + b^l = \sigma(z^l)$$ \</p>
+
+<p>Cost function : $$C = \frac{1}{2n} \sum_{i} (target_i - a_i^L)^2$$ <br />
+Cost function derivative : $$\frac{\partial C}{\partial a_i^L} = (a_i^L - target_i)$$ \</p>
+
+<p>$$\frac{\partial C}{\partial w}$$ and $$\frac{\partial C}{\partial b}$$ represent how quickly Cost function changes with respect to weight w and bias b. Back Propagation is to relate $$\delta^l_i$$ to $$\frac{\partial C}{\partial w}$$ and $$\frac{\partial C}{\partial b}$$. \</p>
+
+<p>BP1 : $$\delta _i^L = \frac{\partial C}{\partial a_i^L} \sigma&rsquo;(z_i^L) = (a_i^L - target_i) \sigma&rsquo;(z_i^L)$$ <br />
+Matrix : $$\delta ^L = \nabla _a C \odot \sigma&rsquo;(z^L) = (a^L - target) \odot \sigma&rsquo;(z^L)$$ \</p>
+
+<p>BP2 : $$\delta _i^l = \frac{\partial C}{\partial z<em>i^l} = \sum</em>{j} \frac{\partial C}{\partial z_j^{l+1}} \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = \sum</em>{j} \delta _j^{l+1} \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = \sum</em>{j} \delta <em>j^{l+1} w</em>{ji}^{l+1} \sigma &lsquo;(z_i^l)$$ <br />
+$$( \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = w</em>{ji}^{l+1} \sigma &lsquo;(z_j^l) )$$ \</p>
+
+<p>BP1 compute the error in L layer, then apply BP2 to compute the layers back through. \</p>
+
+<p>BP3 : $$\frac{\partial C}{\partial b_i^l} = \delta _i^l$$ <br />
+Matrix : $$\frac{\partial C}{\partial b} = \delta$$ \</p>
+
+<p>BP4 : $$\frac{\partial C}{\partial w_{ji}^l} = a_i^{l-1} \delta <em>j^l$$ <br />
+Matrix : $$\frac{\partial C}{\partial w} = a</em>{in} \delta <em>{out}$$ <br />
+$$a</em>{in}$$ is the activation of the neuron input to the weight, and $$\delta _{out}$$ is the error of the neuron output from the weight.</p>
+
+<p>\documentclass[12pt]{article}
+\setlength\parindent{0pt}
+\thispagestyle{empty}</p>
+
+<p>\begin{document}</p>
+
+<p>\setcounter{secnumdepth}{0}
+\section{Back Propagation}</p>
+
+<p>$w_{ji}^l$ Weight from the i neuron in the l-1 layer to the j neuron in the l layer. <br />
+$b_j^l$ Bias from the j neuron in the l layer. \</p>
+
+<p>$a_j^l$ Activation from the j neuron in the l layer. <br />
+$a<em>j^l = \sum</em>{i} w_{ji}^l a_i^{l-1} + b_j^l = \sigma(z_j^l)$ <br />
+$a^l = w^l a^{l-1} + b^l = \sigma(z^l)$ \</p>
+
+<p>Cost function : $C = \frac{1}{2n} \sum_{i} (target_i - a_i^L)^2$ <br />
+Cost function derivative : $\frac{\partial C}{\partial a_i^L} = (a_i^L - target_i)$ \</p>
+
+<p>$\frac{\partial C}{\partial w}$ and $\frac{\partial C}{\partial b}$ represent how quickly Cost function changes with respect to weight w and bias b. Back Propagation is to relate $\delta^l_i$ to $\frac{\partial C}{\partial w}$ and $\frac{\partial C}{\partial b}$. \</p>
+
+<p>BP1 : $\delta _i^L = \frac{\partial C}{\partial a_i^L} \sigma&rsquo;(z_i^L) = (a_i^L - target_i) \sigma&rsquo;(z_i^L)$ <br />
+Matrix : $\delta ^L = \nabla _a C \odot \sigma&rsquo;(z^L) = (a^L - target) \odot \sigma&rsquo;(z^L)$ \</p>
+
+<p>BP2 : $\delta _i^l = \frac{\partial C}{\partial z<em>i^l} = \sum</em>{j} \frac{\partial C}{\partial z_j^{l+1}} \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = \sum</em>{j} \delta _j^{l+1} \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = \sum</em>{j} \delta <em>j^{l+1} w</em>{ji}^{l+1} \sigma &lsquo;(z_i^l)$ <br />
+$( \frac{\partial z_j^{l+1}}{\partial z<em>i^l} = w</em>{ji}^{l+1} \sigma &lsquo;(z_j^l) )$ \</p>
+
+<p>BP1 compute the error in L layer, then apply BP2 to compute the layers back through. \</p>
+
+<p>BP3 : $\frac{\partial C}{\partial b_i^l} = \delta _i^l$ <br />
+Matrix : $\frac{\partial C}{\partial b} = \delta$ \</p>
+
+<p>BP4 : $\frac{\partial C}{\partial w_{ji}^l} = a_i^{l-1} \delta <em>j^l$ <br />
+Matrix : $\frac{\partial C}{\partial w} = a</em>{in} \delta <em>{out}$ <br />
+$a</em>{in}$ is the activation of the neuron input to the weight, and $\delta _{out}$ is the error of the neuron output from the weight.</p>
+
+<p>\end{document}</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/hmeng22">hmeng22</a> 2017</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/markdown.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

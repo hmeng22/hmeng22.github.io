@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/hmeng22&#34;&gt;hmeng22&lt;/a&gt; 2017</copyright>
-    <lastBuildDate>Fri, 28 Jul 2017 18:33:35 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 07 Dec 2017 22:57:30 -0500</lastBuildDate>
     
 	<atom:link href="//hmeng22.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BackPropagationProof</title>
+      <link>//hmeng22.github.io/backpropagationproof/</link>
+      <pubDate>Thu, 07 Dec 2017 22:57:30 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/backpropagationproof/</guid>
+      <description>$$w_{ji}^l$$ Weight from the i neuron in the l-1 layer to the j neuron in the l layer. $$b_j^l$$ Bias from the j neuron in the l layer. \
+$$a_j^l$$ Activation from the j neuron in the l layer. $$aj^l = \sum{i} w_{ji}^l a_i^{l-1} + b_j^l = \sigma(z_j^l)$$ $$a^l = w^l a^{l-1} + b^l = \sigma(z^l)$$ \
+Cost function : $$C = \frac{1}{2n} \sum_{i} (target_i - a_i^L)^2$$ Cost function derivative : $$\frac{\partial C}{\partial a_i^L} = (a_i^L - target_i)$$ \</description>
+    </item>
     
     <item>
       <title>KnapsackProblems</title>

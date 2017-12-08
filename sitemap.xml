@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//hmeng22.github.io/backpropagationproof/</loc>
+    <lastmod>2017-12-07T22:57:30-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//hmeng22.github.io/knapsackproblems/</loc>
     <lastmod>2017-07-28T18:33:35-04:00</lastmod>
   </url>
@@ -69,7 +74,7 @@
   
   <url>
     <loc>//hmeng22.github.io/</loc>
-    <lastmod>2017-07-28T18:33:35-04:00</lastmod>
+    <lastmod>2017-12-07T22:57:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
