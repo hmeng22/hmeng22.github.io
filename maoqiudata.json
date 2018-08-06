@@ -534,6 +534,41 @@ IMDATADONTUSEMYNAME = {
         "amount": 0
       }
     ]
+  }, {
+    "date": "2018-08-05",
+    "values": [{
+        "name": "Hua",
+        "amount": 38.4
+      },
+      {
+        "name": "NoMoon",
+        "amount": 20
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 20
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
   }],
 
   /*
@@ -1063,6 +1098,42 @@ IMDATADONTUSEMYNAME = {
       {
         "name": "Winnie",
         "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2018-08-05",
+    "total": 38.4,
+    "values": [{
+        "name": "Hua",
+        "number": 1
+      },
+      {
+        "name": "NoMoon",
+        "number": 2
+      },
+      {
+        "name": "Winnie",
+        "number": 0
       },
       {
         "name": "DanFeng",
