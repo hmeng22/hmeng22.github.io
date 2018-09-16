@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//hmeng22.github.io/bash/</loc>
+    <lastmod>2018-07-27T17:46:46-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//hmeng22.github.io/backpropagationproof/</loc>
     <lastmod>2017-12-07T22:57:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/bombsweeper/</loc>
+    <lastmod>2017-11-10T12:44:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/snake/</loc>
+    <lastmod>2017-11-10T12:43:17-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/sensors/</loc>
+    <lastmod>2017-11-09T22:54:38-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/mongoosenotes/</loc>
+    <lastmod>2017-11-09T19:25:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/vuenotes/</loc>
+    <lastmod>2017-11-08T20:40:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//hmeng22.github.io/elasticsearch/</loc>
+    <lastmod>2017-11-02T22:46:51-04:00</lastmod>
   </url>
   
   <url>
@@ -74,7 +109,7 @@
   
   <url>
     <loc>//hmeng22.github.io/</loc>
-    <lastmod>2017-12-07T22:57:30-05:00</lastmod>
+    <lastmod>2018-07-27T17:46:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   

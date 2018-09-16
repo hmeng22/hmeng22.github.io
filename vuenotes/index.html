@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VueNotes | hmeng22</title>
+<link rel="stylesheet" href="//hmeng22.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="//hmeng22.github.io/"><h1 class="title is-4">hmeng22</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/hmeng22">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">November 8, 2017</h2>
+    <h1 class="title">VueNotes</h1>
+    <div class="content">
+      
+
+<h1 id="vuejs-notes">VueJS Notes</h1>
+
+<p>Vue.js notes.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Official Guides :</p>
+
+<ul>
+<li><a href="https://github.com/vuejs/vue-cli">Vue-cli</a> - <a href="https://github.com/vuejs/vue-cli">https://github.com/vuejs/vue-cli</a></li>
+<li><a href="https://vuejs.org/v2/guide/">Vue.js</a> - <a href="https://vuejs.org/">https://vuejs.org/</a></li>
+<li><a href="https://vuex.vuejs.org/">Vuex</a> - <a href="https://vuex.vuejs.org/">https://vuex.vuejs.org/</a></li>
+<li><a href="https://router.vuejs.org/">Vue-router</a> - <a href="https://router.vuejs.org/">https://router.vuejs.org/</a></li>
+</ul>
+
+<h3 id="vue-cli">Vue-cli</h3>
+
+<pre><code>$ npm install --global vue-cli
+
+$ vue init webpack my-project
+
+$ cd my-project
+$ npm install
+$ npm run dev
+</code></pre>
+
+<h3 id="vue-js">Vue.js</h3>
+
+<p>Follow the official guide.</p>
+
+<pre><code>new Vue({
+  el: '#app',
+
+  store,
+  router,
+  i18n,
+
+  template: '&lt;App/&gt;',
+  components: {
+    App
+  }
+})
+</code></pre>
+
+<h4 id="component">Component</h4>
+
+<pre><code>{
+  name: 'app',
+
+  data() {
+    return {}
+  },
+
+  computed: {},
+  watch: {},
+
+  props: {},
+
+  methods: {},
+
+  mixins: [],
+  components: {},
+
+  render(h) {
+    return h()
+  },
+
+  directives: {},
+
+  filters: {},
+
+  // lifecycle hooks
+}
+</code></pre>
+
+<pre><code>* Computed vs Methods : A Computed will only re-evaluate when its dependencies have changed. A Method invocation will always run the function whenever a re-redner happens.
+
+* Watch : can perform an asynchronous operation
+</code></pre>
+
+<h4 id="lifecycle-diagram">Lifecycle Diagram</h4>
+
+<p><img src="https://vuejs.org/images/lifecycle.png" alt="Vue.js Lifecycle Diagram" /></p>
+
+<h4 id="keywords">Keywords</h4>
+
+<pre><code>v-model :
+v-bind (:) :
+v-on (@) :
+
+v-for :
+
+v-if, v-else-if, v-else
+v-show
+v-once
+
+ref
+</code></pre>
+
+<pre><code>The parent-child component relationship : props down, events up.
+
+* Prop Validation
+* Custom Events
+  * v-on:customEvent
+  * this.$emit('customEvent')
+
+'two-way binding' .sync (syntax sugar)
+  * :foo.sync='oldVal' (:foo='oldVal' @update:foo='val =&gt; bar = val')
+  * this.$emit('update:foo', newVal)
+</code></pre>
+
+<h4 id="transitions-animation">Transitions &amp; Animation</h4>
+
+<ol>
+<li>v-enter</li>
+<li>v-enter-active</li>
+<li>v-enter-to</li>
+<li>v-leave</li>
+<li>v-leave-active</li>
+<li>v-leave-to</li>
+</ol>
+
+<p>(v- will be replaced by the name)</p>
+
+<p><img src="https://vuejs.org/images/transition.png" alt="Vue.js Transition" /></p>
+
+<pre><code>&lt;transition name=&quot;fade&quot;&gt;&lt;/transition&gt;
+&lt;transition-group&gt;&lt;/transition-group&gt;
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+</code></pre>
+
+<h4 id="reusability-composition">Reusability &amp; Composition</h4>
+
+<h5 id="mixins">Mixins</h5>
+
+<p>A mixin object can contain any component options.</p>
+
+<pre><code>var mixin = {}
+Vue.mixin({})
+</code></pre>
+
+<h5 id="custom-directives">Custom Directives</h5>
+
+<p>Directive Hooks</p>
+
+<ol>
+<li>bind</li>
+<li>inserted</li>
+<li>update</li>
+<li>componentUpdated</li>
+<li>unbind</li>
+</ol>
+
+<p>Directive Hook Arguments</p>
+
+<ol>
+<li>el</li>
+<li>binding</li>
+<li>vnode</li>
+<li>oldVnode</li>
+</ol>
+
+<pre><code>directives: {}
+Vue.directive('customDirective', {})
+</code></pre>
+
+<p><a href="https://vuejs.org/v2/guide/custom-directive.html">Vue.js Custom Directives</a></p>
+
+<h5 id="plugins">Plugins</h5>
+
+<pre><code>MyPlugin.install = (Vue, options) =&gt; {}
+Vue.use(MyPlugin)
+</code></pre>
+
+<p><a href="https://vuejs.org/v2/guide/plugins.html">Vue.js Plugins</a></p>
+
+<h4 id="reactivity-in-depth">Reactivity in Depth</h4>
+
+<p>Vue.js uses Object.defineProperty to convert data to getter/setters.</p>
+
+<pre><code>Vue.set(vm.vueObject, 'newObj', 2)
+this.$set(this.vueObject, 'newObj', 2)
+this.vueObject = Object.assign({}, this.vueObject, {a: 1, b: 2})
+</code></pre>
+
+<pre><code>Async Update Queue the component will not re-render immediately unitl the next “tick”, when the queue is flushed.
+
+Vue.nextTick(() =&gt; {})
+this.$nextTick(() =&gt; {})
+</code></pre>
+
+<h3 id="vuex">Vuex</h3>
+
+<p>A single source of truth.</p>
+
+<pre><code>const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+
+  mutations: {
+    increment(state, payload) {
+      state.count += payload.amount
+    }
+  },
+
+  actions: {
+    increment({dispatch, commit, state, getters}, payload) {
+      commit('increment', payload)
+    }
+  },
+
+  getters: {
+    count: (state, getters) =&gt; {
+      return state.count
+    }
+  },
+
+  modules: {
+    a: moduleA,
+    b: moduleB
+  },
+
+  plugins: [plugin]
+})
+</code></pre>
+
+<pre><code>Vuex - State
+* initial state with all desired fields upfront
+
+Vuex - Actions
+* Actions handle arbitrary asynchronous operations
+* Actions receive a context (same to store)
+* Actions 1st parameters {commit, dispatch, state, getters} (from context)
+* Actions 2nd parameters could be payload
+
+Vuex - Mutations
+* The exclusive way to change Vues State
+* Mutations 1st parameters is 'state'
+* Mutations 2nd parameters could be payload (an object)
+* store.commit('')
+
+Vuex - Getters
+* Vuex store's computed properties
+* Getters 1st parameters is 'state'
+* Getters 2nd parameters could be other Getters
+* store.getters.xxx
+</code></pre>
+
+<pre><code>                      dispatch                Commit
+                  -&gt;-&gt;-&gt;-&gt;-&gt;-&gt;-&gt;-&gt;Actions-&gt;-&gt;-&gt;-&gt;-&gt;-&gt;-&gt;-&gt;
+mapState        |                 (async)                 |
+mapGetters      Vue                                   Mutations (sync)
+mapMutations    |                                         |
+mapActions        &lt;-&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-State&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-&lt;-
+                                              Mutate
+</code></pre>
+
+<p><img src="https://vuex.vuejs.org/en/images/vuex.png" alt="Vuex" /></p>
+
+<h3 id="vue-router">Vue-router</h3>
+
+<pre><code>/* Lazy Loading Routes */
+consot cUser = () =&gt; import('./cUser.vue')
+
+const router = new VueRouter({
+    // history, hash, abstract
+    mode: 'history',
+
+    base: __dirname,
+    routes: [
+      {
+        path: '/a',
+        redirect: '/b'
+      }, {
+        path: '/',
+        components: {
+          default: cD,
+          a: cA,
+          b: cB
+        }
+      }, {
+        path: '/user/:id',
+        name: 'user',
+        component: cUser,
+        children: [{
+          path: '',
+          component: cUserHome
+        }, {
+          path: 'profile',
+          component: cUserProfile,
+        }]
+      }, {
+        path: '/post'
+        component: cPost,
+        beforeEnter: (to, from, next) =&gt; {}
+      }
+    ],
+
+    scrollBehavior (to, from, savedPosition) {
+      return new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+          resolve({x: 0, y: 0})
+        }, 500)
+      })
+    }
+})
+
+router.beforeEach((to, from, next) =&gt; {})
+router.afterEach((to, from) =&gt; {})
+
+router.push()
+router.replace()
+router.go()
+</code></pre>
+
+<pre><code>beforeRouteEnter (to, from, next) {
+  next(vm =&gt; {})
+}
+beforeRouteUpdate
+beforeRouteLeave (to, from, next) {
+  next()
+}
+
+</code></pre>
+
+<pre><code>&lt;div&gt;
+  &lt;router-link to=&quot;user/1&quot;&gt;&lt;/router-link&gt;
+  &lt;router-link to=&quot;user/1/profile&quot;&gt;&lt;/router-link&gt;
+  &lt;router-link :to=&quot;{name: 'user', params: {userId: 1}}&quot;&gt;&lt;/router-link&gt;
+  &lt;transition&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/transition&gt;
+  &lt;router-view name=&quot;a&quot;&gt;&lt;/router-view&gt;
+  &lt;router-view name=&quot;b&quot;&gt;&lt;/router-view&gt;
+&lt;/div&gt;
+
+this.$route.params
+this.$route.query
+this.$route.hash
+</code></pre>
+
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/hmeng22">hmeng22</a> 2017</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/markdown.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
