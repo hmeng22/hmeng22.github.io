@@ -1,0 +1,20 @@
+baseurl = "//hmeng22.github.io/"
+languageCode = "en"
+title = "hmeng22"
+theme = "hemingway"
+copyright = "&copy; <a href=\"https://github.com/hmeng22\">hmeng22</a> 2017"
+googleAnalytics = ""
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["javascript", "cpp", "markdown"]
+
+[[params.social]]
+url = "https://github.com/hmeng22"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"

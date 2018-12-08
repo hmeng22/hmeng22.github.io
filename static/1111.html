@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>1111</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <svg class="heart" width="100%" height="100%" viewBox="0 0 1314 1314">
+    <g class="heart_group heart_draw_group">
+      <rect class="heart_square heart_draw" x="397" y="397" width="520" height="520" />
+      <circle class="heart_circle_left heart_draw" cx="657" cy="657" r="260" />
+      <circle class="heart_circle_right heart_draw" cx="657" cy="657" r="260" />
+
+      <path class="heart_shape" d="M 397 917, L 397 397, A 260 260 0 0 1 917 397" />
+      <path class="heart_shape" d="M 397 917, L 917 917, A 260 260 0 0 0 917 397" />
+    </g>
+  </svg>
+
+  <script type="text/javascript">
+    (function() {
+      /*
+       * Thanks to
+       * https://codepen.io/acauamontiel/pen/mJdnw
+       */
+
+      /*
+       * requestAnimationFrame pollyfill
+       */
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = (window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback) {
+          return window.setTimeout(callback, 1000 / 60);
+        });
+      }
+
+      function Constellation(element, options) {
+        var canvas = element;
+        var context = canvas.getContext('2d');
+        var defaultOptions = {};
+        options = options || {};
+        defaultOptions.starColor = options.starColor || 'rgba(255, 255, 255, .9)';
+        defaultOptions.starWidth = options.starWidth || 3;
+        defaultOptions.starRandomWidth = options.starRandomWidth || true;
+
+        defaultOptions.positionX = options.positionX || 0;
+        defaultOptions.positionY = options.positionY || 0;
+
+        defaultOptions.width = options.width || window.innerWidth;
+        defaultOptions.height = options.height || window.innerHeight;
+
+        defaultOptions.velocity = options.velocity || 0.1;
+
+        defaultOptions.length = options.length || 620;
+
+        defaultOptions.stars = [];
+
+
+        var activeParameter = 0.3;
+
+        function Star() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+
+          this.vx = (defaultOptions.velocity - (Math.random() * activeParameter));
+          this.vy = (defaultOptions.velocity - (Math.random() * activeParameter));
+
+          this.radius = defaultOptions.starRandomWidth ? (Math.random() * defaultOptions.starWidth) : defaultOptions.starWidth;
+        }
+
+        Star.prototype = {
+          create: function() {
+            context.beginPath();
+            context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            context.fill();
+          },
+
+          animate: function() {
+            for (var i = 0; i < defaultOptions.length; i++) {
+
+              var star = defaultOptions.stars[i];
+
+              if (star.y < 0 || star.y > canvas.height) {
+                star.vx = star.vx;
+                star.vy = -star.vy;
+              } else if (star.x < 0 || star.x > canvas.width) {
+                star.vx = -star.vx;
+                star.vy = star.vy;
+              }
+
+              star.x += star.vx;
+              star.y += star.vy;
+            }
+          }
+        }
+
+        // Constellation methods
+        this.createStars = function() {
+          var length = defaultOptions.length;
+          var star;
+
+          context.clearRect(0, 0, canvas.width, canvas.height);
+
+          for (var i = 0; i < length; i++) {
+            defaultOptions.stars.push(new Star());
+            star = defaultOptions.stars[i];
+
+            star.create();
+          }
+
+          star.animate();
+        }
+
+        this.setCanvas = function() {
+          canvas.width = defaultOptions.width;
+          canvas.height = defaultOptions.height;
+        }
+
+        this.setContext = function() {
+          context.fillStyle = defaultOptions.starColor;
+          context.strokeStyle = defaultOptions.lineColor;
+          context.lineWidth = defaultOptions.lineWidth;
+        }
+
+        this.setInitialPosition = function() {
+          if (!options || !options.hasOwnProperty('position')) {
+            defaultOptions.positionX = canvas.width * 0.5;
+            defaultOptions.positionY = canvas.height * 0.5;
+          }
+        }
+
+        this.loop = function(callback) {
+          callback();
+
+          this.rAF = window.requestAnimationFrame(function() {
+            this.loop(callback);
+          }.bind(this));
+        }
+
+        this.init = function() {
+          this.setCanvas();
+          this.setContext();
+          this.setInitialPosition();
+          this.loop(this.createStars);
+          window.onmousemove = function(e) {
+            defaultOptions.positionX = e.pageX - canvas.offsetLeft;
+            defaultOptions.positionY = e.pageY - canvas.offsetTop;
+          }
+          window.onresize = function() {
+            window.cancelAnimationFrame(this.rAF);
+          }
+        }
+      }
+
+      new Constellation(document.getElementById('canvas')).init();
+    })();
+  </script>
+
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      background: radial-gradient(#666, #555, #444, #333, #222);
+      overflow: hidden;
+    }
+
+    #canvas {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .heart {
+      width: 520px;
+      height: 520px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .heart_group {
+      transform-origin: 657px 657px;
+      transform: rotate(-45deg);
+    }
+
+    .heart_draw_group {
+      animation: heart_draw_animation 1314ms 5s infinite;
+    }
+
+    .heart_draw {
+      stroke: #117;
+      stroke-width: 5;
+      stroke-opacity: 2;
+      fill-opacity: 0;
+    }
+
+    .heart_square {
+      stroke-dasharray: 2080;
+      stroke-dashoffset: 2080;
+      animation: heart_square_animation 5s infinite;
+    }
+
+    .heart_circle_left {
+      stroke-dasharray: 1633;
+      stroke-dashoffset: 1633;
+      animation: heart_circle_left_animation 5s infinite;
+    }
+
+    .heart_circle_right {
+      stroke-dasharray: 1633;
+      stroke-dashoffset: 1633;
+      animation: heart_circle_right_animation 5s infinite;
+    }
+
+    @keyframes heart_square_animation {
+      12% {
+        stroke-dashoffset: 0;
+      }
+
+      43% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+
+      85% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes heart_circle_left_animation {
+      12% {
+        stroke-dashoffset: 0;
+      }
+      31% {
+        stroke-dashoffset: 0;
+        transform: translateY(0);
+      }
+      41% {
+        stroke-dashoffset: 0;
+        transform: translateY(-260px);
+      }
+      43% {
+        stroke-dashoffset: 0;
+        transform: translateY(-260px);
+        opacity: 1;
+      }
+      85% {
+        stroke-dashoffset: 0;
+        transform: translateY(-260px);
+        opacity: 0;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        transform: translateY(-260px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes heart_circle_right_animation {
+      12% {
+        stroke-dashoffset: 0;
+      }
+      31% {
+        stroke-dashoffset: 0;
+        transform: translateX(0);
+      }
+      41% {
+        stroke-dashoffset: 0;
+        transform: translateX(260px);
+      }
+      43% {
+        stroke-dashoffset: 0;
+        transform: translateX(260px);
+        opacity: 1;
+      }
+      85% {
+        stroke-dashoffset: 0;
+        transform: translateX(260px);
+        opacity: 0;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        transform: translateX(260px);
+        opacity: 0;
+      }
+    }
+
+    .heart_shape {
+      stroke: red;
+      stroke-width: 5;
+      fill: transparent;
+      stroke-dasharray: 1337;
+      stroke-dashoffset: 1337;
+      animation: heart_shape_animation 5s infinite;
+    }
+
+    @keyframes heart_shape_animation {
+      55% {
+        stroke-dashoffset: 1337;
+        fill: transparent;
+      }
+      70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+      }
+      87% {
+        stroke-dashoffset: 0;
+        fill: red;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        fill: red;
+      }
+    }
+  </style>
+</body>
+
+</html>

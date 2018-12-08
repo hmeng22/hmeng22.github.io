@@ -1,0 +1,1160 @@
+IMDATADONTUSEMYNAME = {
+  "player": [
+    "Hua",
+    "NoMoon",
+    "Winnie",
+    "DanFeng",
+    "XinZe",
+    "Cannon",
+    "Chang",
+    "Robin"
+  ],
+  "topup": [{
+    "date": "2017-07-18",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 10
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 5
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-07-27",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 5
+      },
+      {
+        "name": "Winnie",
+        "amount": 20
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-01",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 20
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 10
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-08",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 6
+      },
+      {
+        "name": "Winnie",
+        "amount": 20
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 6
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-15",
+    "values": [{
+        "name": "Hua",
+        "amount": 30
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-21",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-31",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 6
+      },
+      {
+        "name": "Winnie",
+        "amount": 20
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-07",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 40
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-19",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 24
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-26",
+    "values": [{
+        "name": "Hua",
+        "amount": 90.40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 20
+      },
+      {
+        "name": "Winnie",
+        "amount": 50
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-10-12",
+    "values": [{
+        "name": "Hua",
+        "amount": 20
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-10-24",
+    "values": [{
+        "name": "Hua",
+        "amount": 24
+      },
+      {
+        "name": "NoMoon",
+        "amount": 0
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 24
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2017-11-30",
+    "values": [{
+        "name": "Hua",
+        "amount": 33
+      },
+      {
+        "name": "NoMoon",
+        "amount": 11
+      },
+      {
+        "name": "Winnie",
+        "amount": 11
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2018-05-12",
+    "values": [{
+        "name": "Hua",
+        "amount": 40
+      },
+      {
+        "name": "NoMoon",
+        "amount": 20
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 7
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2018-07-21",
+    "values": [{
+        "name": "Hua",
+        "amount": 48
+      },
+      {
+        "name": "NoMoon",
+        "amount": 10
+      },
+      {
+        "name": "Winnie",
+        "amount": 100
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 0
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }, {
+    "date": "2018-08-05",
+    "values": [{
+        "name": "Hua",
+        "amount": 38.4
+      },
+      {
+        "name": "NoMoon",
+        "amount": 20
+      },
+      {
+        "name": "Winnie",
+        "amount": 0
+      },
+      {
+        "name": "DanFeng",
+        "amount": 0
+      },
+      {
+        "name": "XinZe",
+        "amount": 20
+      },
+      {
+        "name": "Cannon",
+        "amount": 0
+      },
+      {
+        "name": "Chang",
+        "amount": 0
+      },
+      {
+        "name": "Robin",
+        "amount": 0
+      }
+    ]
+  }],
+
+  /*
+   *
+   *
+   *
+   *
+   *
+   *
+   */
+
+  "activity": [{
+    "date": "2017-07-18",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-07-27",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 0
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-01",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-08",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 2
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-15",
+    "total": 30,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 3
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-21",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 0
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-08-31",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 3
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-07",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 3
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-19",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 3
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-09-26",
+    "total": 90.40,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 3
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 2
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-10-12",
+    "total": 20,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 0
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 0
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2017-10-24",
+    "total": 24,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 0
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 0
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 2
+      }
+    ]
+  }, {
+    "date": "2017-11-30",
+    "total": 24,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 2
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 0
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2018-05-12",
+    "total": 40,
+    "values": [{
+        "name": "Hua",
+        "number": 3
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2018-07-21",
+    "total": 48,
+    "values": [{
+        "name": "Hua",
+        "number": 2
+      },
+      {
+        "name": "NoMoon",
+        "number": 1
+      },
+      {
+        "name": "Winnie",
+        "number": 2
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }, {
+    "date": "2018-08-05",
+    "total": 38.4,
+    "values": [{
+        "name": "Hua",
+        "number": 1
+      },
+      {
+        "name": "NoMoon",
+        "number": 2
+      },
+      {
+        "name": "Winnie",
+        "number": 0
+      },
+      {
+        "name": "DanFeng",
+        "number": 0
+      },
+      {
+        "name": "XinZe",
+        "number": 1
+      },
+      {
+        "name": "Cannon",
+        "number": 0
+      },
+      {
+        "name": "Chang",
+        "number": 0
+      },
+      {
+        "name": "Robin",
+        "number": 0
+      }
+    ]
+  }]
+}
