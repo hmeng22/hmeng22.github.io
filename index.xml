@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hmeng22</title>
+    <link>//hmeng22.github.io/</link>
+    <description>Recent content on hmeng22</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/hmeng22&#34;&gt;hmeng22&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Fri, 27 Jul 2018 17:46:46 -0400</lastBuildDate>
+    
+	<atom:link href="//hmeng22.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>//hmeng22.github.io/bash/</link>
+      <pubDate>Fri, 27 Jul 2018 17:46:46 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/bash/</guid>
+      <description>Bash # export PS1=&amp;quot;[\#] \$ &amp;quot; PS1变量可以使用的参数值有如下 : \d	日期weekday month date \H	完整主机名称 \h	仅取主机的第一个名字 \t	显示时间为24小时格式，如：HH：MM：SS \T	显示时间为12小时格式 \A	显示时间为24小时格式：HH：MM \u	当前用户的账号名称 \v	BASH的版本信息 \w	完整的工作目录名称。家目录会以 ~代替 \W	利用basename取得工作目录名称，所以只会列出最后一个目录 \#	下达的第几个命令(应该是\\#) \$	提示字符，如果是root时，提示符为：# ，普通用户则为：$（应该是\\$） \[	字符&amp;quot;[&amp;quot;(应该是\\[) \]	字符&amp;quot;]&amp;quot;(应该是\\]) \!	命令行动态统计历史命令次数(应该是\\!)  Command cp -R dirA dirB rm -rf files 更改文件权限 : chmod -R 755 file 更改文件属组 : chown -R root:wheel dirA 分页格式化显示文件内容 : pg file 分屏格式化显示文件内容 : more file 查找文件 : find 显示文件类型 : file file 显示文件前20行 : head -20 file 显示文件后20行 : tail -20 file 在文件中查找 : grep 统计文件字符数、词数和行数 : wc file 显示文件系统总空间和可用空间 : df 显示当前系统活动的总信息 : w 查看文件夹大小 : du -sh * 查看系统信息 : uname -a 查询进程 : ps -ef | grep httpd 压缩 : tar zcvpf filename.</description>
+    </item>
+    
+    <item>
+      <title>BackPropagationProof</title>
+      <link>//hmeng22.github.io/backpropagationproof/</link>
+      <pubDate>Thu, 07 Dec 2017 22:57:30 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/backpropagationproof/</guid>
+      <description>\documentclass[12pt,a4paper]{article} \setlength\parindent{0pt} \thispagestyle{empty} \begin{document} \setcounter{secnumdepth}{0} \section{Back Propagation} $w_{ji}^l$ Weight from the i neuron in the l-1 layer to the j neuron in the l layer. \\ $b_j^l$ Bias from the j neuron in the l layer. \\ $a_j^l$ Activation from the j neuron in the l layer. \\ $a_j^l = \sum_{i} w_{ji}^l a_i^{l-1} + b_j^l = \sigma(z_j^l)$ \\ $a^l = w^l a^{l-1} + b^l = \sigma(z^l)$ \\ Cost function : $C = \frac{1}{2n} \sum_{i} (target_i - a_i^L)^2$ \\ Cost function derivative : $\frac{\partial C}{\partial a_i^L} = (a_i^L - target_i)$ \\ $\frac{\partial C}{\partial w}$ and $\frac{\partial C}{\partial b}$ represent how quickly Cost function changes with respect to weight w and bias b.</description>
+    </item>
+    
+    <item>
+      <title>BombSweeper</title>
+      <link>//hmeng22.github.io/bombsweeper/</link>
+      <pubDate>Fri, 10 Nov 2017 12:44:09 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/bombsweeper/</guid>
+      <description>import java.awt.BorderLayout; import java.awt.Color; import java.awt.Container; import java.awt.Font; import java.awt.GridLayout; import java.awt.Insets; import java.awt.event.ActionEvent; import java.awt.event.ActionListener; import java.awt.event.MouseEvent; import java.awt.event.MouseListener; import java.util.Timer; import java.util.TimerTask; import javax.swing.JFrame; import javax.swing.JLabel; import javax.swing.JMenu; import javax.swing.JMenuBar; import javax.swing.JMenuItem; import javax.swing.JOptionPane; import javax.swing.JPanel; import javax.swing.SwingConstants; import javax.swing.SwingUtilities; import javax.swing.JButton; public class BombSweeper extends JFrame implements ActionListener, MouseListener { private static final long serialVersionUID = 1L; /** * Menu **/ private JMenuBar menubar; private JMenu menu; private JMenuItem start; private JMenuItem restart; private JMenuItem levels; private JMenuItem record; private JMenuItem exit; /** * Panel **/ private JPanel mainpanel; private BombCube[][] bombcubes; private JPanel west; private JPanel north; private JPanel south; private JLabel RBLabel; private JLabel TimeLabel; private Timer timer; private int second; /** * Window **/ private Container container; /** * Data **/ private int level = 0; //difficulty private int Block[][] = {{9, 9}, {16, 16}, {16, 30}}; //rows and columns private int Size[][] = {{363, 404}, {620, 664}, {1145, 654}};//window size private int BlockNum[] = {81, 256, 480}; //cell number private int BombNum[] = {10, 40, 99}; //bomb number private int OpenedBlock, RemainedBlock; //opened cell number, remained cell number private int FindedBomb, RemainedBomb; //found bomb number, remained bomb number // directions private int varI[] = {-1, -1, -1, 0, 1, 1, 1, 0}; private int varJ[] = {-1, 0, 1, 1, 1, 0, -1, -1}; // Colors : 0-opened cell&#39; color, 1-8-numbers&#39; color, 9-cell&#39;s color private Color color[] = {Color.</description>
+    </item>
+    
+    <item>
+      <title>Snake</title>
+      <link>//hmeng22.github.io/snake/</link>
+      <pubDate>Fri, 10 Nov 2017 12:43:17 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/snake/</guid>
+      <description>import java.awt.Font; import java.awt.Graphics; import java.awt.event.KeyEvent; import java.awt.event.KeyListener; import java.util.Random; import javax.swing.JFrame; import javax.swing.JPanel; public class Snake extends JPanel implements KeyListener{ private static final long serialVersionUID = 1L; /***************Environment************************/ public static final int SIZE = 10; public static final int SIZEE = Snake.SIZE * Snake.SIZE; /***************Position*****************/ private int gstartx = Snake.SIZE * 2; private int gstarty = Snake.SIZE * 2; /***************Constants************************/ public static final int EMPTY = 0; public static final int FOOD = 1; public static final int SNAKENODE = 2; public static final int STONE = 3; public static final int STONE2 = 4; public static final int STONE3 = 5; /***************Directions************************/ public static final int UP = 0; public static final int RIGHT = 1; public static final int DOWN = 2; public static final int LEFT = 3; /***************Variables************************/ private int[][] matrix ; private SnakeNode[] littlesnake ; private SnakeNode head ; private int headx ; private int heady ; private int len ; private Food food ; private int direction ; private boolean isAlive ; public static void main(String[] args) { Snake snake = new Snake(); JFrame f = new JFrame(); f.</description>
+    </item>
+    
+    <item>
+      <title>Sensors</title>
+      <link>//hmeng22.github.io/sensors/</link>
+      <pubDate>Thu, 09 Nov 2017 22:54:38 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/sensors/</guid>
+      <description>Temperature Sensor LM35 or TMP36 Humidity and Temperature Sensor DHT11 / DHT22
+Digital Barometric Pressure Sensor BMP085
+Digital Magnetometer HMC5883L Magnetometer HMC6352
+Gas Sensor MQ-9B Gas Sensor MQ135
+Color Recognition Sensor TCS230 TCS3200
+Accelerometer MMA7260 Digital Accelerometer ADXL345 I2C
+GPS EM-411 SIRF III
+GY-85 9DOF (Accelerometer ADXL345, Gyroscope ITG3200 and Magnetometer HMC5883)
+RFID reader MFRC522 RF Transmitter MX-FS-03V and Receiver MX-JS-05V (Wireless)
+Bluetooth HC-06 HC-05
+Soil Moisture Sensor YL-69 Rain Sensor FC-37</description>
+    </item>
+    
+    <item>
+      <title>MongooseNotes</title>
+      <link>//hmeng22.github.io/mongoosenotes/</link>
+      <pubDate>Thu, 09 Nov 2017 19:25:55 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/mongoosenotes/</guid>
+      <description>Mongoose Notes Mongoose notes.
+Getting Started  Combine multiple queries  Promise.all([query1.exec(), query2.exec()]) // var queries = []; [].forEach(() =&amp;gt; { var p = new Promise((resolve, reject) =&amp;gt; { // query : resolve() and reject() }); queries.push(p) }) Promise.all(queries).then((results) =&amp;gt; {}).catch((err) =&amp;gt; {});   Find certain elements of an array inside a query Populate include/exclude certain fileds with conditions Populate nested Object  Model.find({ _id: id, age: { $gt: 22, $lt: 28}, like: { $in: [&#39;like1&#39;, &#39;like2&#39;] } }, &#39;field1 field2&#39;, { &#39;field3&#39;: { &#39;$slice&#39;: [-skip, amount] } }) .</description>
+    </item>
+    
+    <item>
+      <title>VueNotes</title>
+      <link>//hmeng22.github.io/vuenotes/</link>
+      <pubDate>Wed, 08 Nov 2017 20:40:52 -0500</pubDate>
+      
+      <guid>//hmeng22.github.io/vuenotes/</guid>
+      <description>VueJS Notes Vue.js notes.
+Getting Started Official Guides :
+ Vue-cli - https://github.com/vuejs/vue-cli Vue.js - https://vuejs.org/ Vuex - https://vuex.vuejs.org/ Vue-router - https://router.vuejs.org/  Vue-cli $ npm install --global vue-cli $ vue init webpack my-project $ cd my-project $ npm install $ npm run dev  Vue.js Follow the official guide.
+new Vue({ el: &#39;#app&#39;, store, router, i18n, template: &#39;&amp;lt;App/&amp;gt;&#39;, components: { App } })  Component { name: &#39;app&#39;, data() { return {} }, computed: {}, watch: {}, props: {}, methods: {}, mixins: [], components: {}, render(h) { return h() }, directives: {}, filters: {}, // lifecycle hooks }  * Computed vs Methods : A Computed will only re-evaluate when its dependencies have changed.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>//hmeng22.github.io/elasticsearch/</link>
+      <pubDate>Thu, 02 Nov 2017 22:46:51 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/elasticsearch/</guid>
+      <description>ElasticSearch Cluster A Cluster is a collection of one or more Nodes(servers) that together holds the entire data and provides federated indexing and search capabilities across all Nodes.
+A Cluster is identified by a unique name.
+Node A Node is a single server that is part of the Cluster, stores the data, and participates in the Cluster&amp;rsquo;s indexing and search capabilities.
+A Node is identified by a name which by default is a random Universally Unique Identifier(UUID).</description>
+    </item>
+    
+    <item>
+      <title>KnapsackProblems</title>
+      <link>//hmeng22.github.io/knapsackproblems/</link>
+      <pubDate>Fri, 28 Jul 2017 18:33:35 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/knapsackproblems/</guid>
+      <description>Knapsack Problems Dynamic programming aka optimization is a method saves cpmputation time by using extra space. The key is break the problem into sub-problems, solve each sub-problem and store its result.
+N	: how many different items W	: weight limit V	: volume limit Value	: Value limit amount[n]	: each item&#39;s amount weight[n]	: each item&#39;s weight volume[n]	: each item&#39;s volume value[n]	: each item&#39;s value  K1: 0/1 : Each item can only be selected once.</description>
+    </item>
+    
+    <item>
+      <title>2Arrays</title>
+      <link>//hmeng22.github.io/2arrays/</link>
+      <pubDate>Fri, 28 Jul 2017 17:42:07 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/2arrays/</guid>
+      <description>Given two arrays a[] and b[] and they have the same length. Find the maximum difference diff = b[j] - a[i] while j &amp;gt;= i.  Solutions Method 1 : /* Iterate a[i] (0 &amp;lt; i &amp;lt; length) and a[j] (i &amp;lt; j &amp;lt; length), record the maximum difference b[j] - a[i]. */ function method1(a, b) { var o_max = 0; var p_i, p_j; for (var i = 0; i &amp;lt; length; i++) { for (var j = i; j &amp;lt; length; j++) { if (b[j] - a[i] &amp;gt;= o_max) { o_max = b[j] - a[i]; p_i = i; p_j = j; } } } return o_max; }  Method 2 : /* Find a[] minimum value a[i] and b[] maximum value b[j]; if (j&amp;gt;i) { return b[j] - a[i]; } else { Slice a[] and b[] into 3 arrays separately: a_left[0-i], a_mid[i-j], a_right[j-length] b_left[0-i], b_mid[i-j], b_right[j-length] Find a_left[0-i] minimum value a_left_min Find b_right[j-length] maximum value b_right_max Find maximum difference ab_mid_diff in a_mid[i-j] and b_mid[i-j] return maximum value of (b[j] - a_left_min, ab_mid_diff, b_right_max - a[i]) } */ function method2(a, b) { var o_max = m2(a, b); return o_max; } function arrayMin(a) { var l = a.</description>
+    </item>
+    
+    <item>
+      <title>Auth</title>
+      <link>//hmeng22.github.io/auth/</link>
+      <pubDate>Thu, 27 Jul 2017 18:14:42 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/auth/</guid>
+      <description>Authentication &amp;amp; Authorization Authorization First, return a token object if the credentials are valid.
+Authentication is handled by passing a token to the user after successful login, which will be sent to the server with every request from then. As soon as a user makes a call to one of our API endpoints, we redirect the request to the authentication middleware. This middleware is responsible for authenticating the client by first processing the token.</description>
+    </item>
+    
+    <item>
+      <title>JSPrototype</title>
+      <link>//hmeng22.github.io/jsprototype/</link>
+      <pubDate>Wed, 26 Jul 2017 17:45:18 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/jsprototype/</guid>
+      <description>Inheritance and the prototype chain father.js
+function father() { var fatherVar = 0; function fatherFunction() { console.log(&amp;quot;fatherFunction&amp;quot;) } this.fatherThisVar = 3; this.fatherThisFunction = function() { console.log(&amp;quot;fatherThisFunction&amp;quot;) } Object.defineProperty(this, &#39;fatherDefineVar&#39;, {value: 4}); Object.defineProperty(this, &#39;fatherDefineFunction&#39;, { value: function() { console.log(&amp;quot;fatherDefineFunction&amp;quot;) } }); Object.assign(this, { fatherPrototypeAssignThisVar: 6, fatherPrototypeAssignThisFunction: function() { console.log(&amp;quot;fatherPrototypeAssignThisFunction&amp;quot;) }, fatherPrototypeAssignThisFunctionReturnFunction: (function() { return function fatherPrototypeAssignThisFunctionReturnFunction() { console.log(&amp;quot;fatherPrototypeAssignThisFunctionReturnFunction&amp;quot;) } }()) }); } Object.defineProperty(father, &#39;fatherDefineFatherVar&#39;, {value: 1}); Object.defineProperty(father, &#39;fatherDefineFatherFunction&#39;, { value: function() { console.</description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>//hmeng22.github.io/latex/</link>
+      <pubDate>Tue, 25 Jul 2017 08:12:05 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/latex/</guid>
+      <description>概念 控制序列，是以反斜杠\开头，以第一个空格或非字母的字符结束一段文字。
+开头 \documentclass[12pt,a4paper]{article} \title{Hello,World!} \author{Hua} \date{\today} 页边距 \usepackage{geometry} \geometry{papersize={15cm,15cm}} \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm} 字间距 \renewcommand{\topfraction}{1} \renewcommand{\bottomfraction}{1} \renewcommand{\textfraction}{0} 行间距 \linespread{1} 换行 ~\\ or \\  正文 \begin{document} ... ... \maketitle \tableofcontents \section{Hello World!} \subsection{Hello, China!} \subsubsecton{Hello, Captial!} \paragraph{a paragraph} \subparagraph{an a paragraph} ... ... \end{document} 行间距 \usepackage{setspace} \begin{spacing}{1.5} ... \end{spacing}  文字 左对齐文字 \begin{flushleft} \end{flushleft} 居中文字 \begin{center} \end{center} 右对齐文字 \begin{flushright} \end{flushright} Latex 设置字体大小（由小到大） \tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge e.</description>
+    </item>
+    
+    <item>
+      <title>Raid</title>
+      <link>//hmeng22.github.io/raid/</link>
+      <pubDate>Tue, 25 Jul 2017 08:05:51 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/raid/</guid>
+      <description> RAID Redundant Array of Independent Disks (RAID) 独立硬盘冗余阵列.
+RAID 0  RAID 0 |--------------| A1 A2 A3 A4 A5 A6 Disk 0 Disk 1  RAID 1  RAID 1 |--------------| A1 A1 A2 A2 A3 A3 Disk 0 Disk 1  RAID 5  RAID 5 (at least 3 disks) |--------------|--------------|--------------| A1 A2 A3 Ap B1 B2 Bp B4 C1 Cp C3 C4 Dp D2 D3 D4 Disk 0 Disk 1 Disk 2 Disk 3  RAID 01  RAID 1 |----------------------------| RAID 0 RAID 0 |--------------| |--------------| A1 A2 A1 A2 A3 A4 A3 A4 A5 A6 A5 A6 Disk 0 Disk 1 Disk 2 Disk 3  RAID 10  RAID 0 |----------------------------| RAID 1 RAID 1 |--------------| |--------------| A1 A1 A2 A2 A3 A3 A4 A4 A5 A5 A6 A6 Disk 0 Disk 1 Disk 2 Disk 3  </description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>//hmeng22.github.io/testing/</link>
+      <pubDate>Mon, 24 Jul 2017 18:09:04 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/testing/</guid>
+      <description>TDD vs BDD Test-driven development (TDD) which means you write your tests before your code, is one of the main, agile development techniques. The genius of TDD lies in increased quality of code, faster development resulting from greater programmer confidence, and improved bug detection. (with assert)
+Behavior-driven development (BDD) encourages collaboration between product owners and programmers. (with expect)
+Tools Test Runner Karma is a browser test runner which creates a fake server to load tests files, run them and report results.</description>
+    </item>
+    
+    <item>
+      <title>Regex</title>
+      <link>//hmeng22.github.io/regex/</link>
+      <pubDate>Mon, 24 Jul 2017 18:09:00 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/regex/</guid>
+      <description> Regular Expression 圆括号 &amp;quot;()&amp;quot; 分组 方括号 &amp;quot;[]&amp;quot; 匹配字符 花括号 &amp;quot;{}&amp;quot; 匹配字符的数量 插入符 &amp;quot;^&amp;quot; 开始 美元符 &amp;quot;$&amp;quot; 结束  .	除换行符以外任意单字符 a|b	a or b *	0 or more times +	at least 1 time ?	0 or 1 time {n}	more than n times {n, m}	between n and m times     Reg       \d [0-9] Digit   \D [^0-9] Non-digit   \s [\s\t\r\n\f] Whitespace   \S [^\s\t\r\n\f] Non-Whitespace   \w [A-Za-z0-9] Word   \W [^A-Za-z0-9] Non-word    </description>
+    </item>
+    
+    <item>
+      <title>Gulp</title>
+      <link>//hmeng22.github.io/gulp/</link>
+      <pubDate>Mon, 24 Jul 2017 18:08:49 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/gulp/</guid>
+      <description>Gulp gulpfile.js var gulp = require(&#39;gulp&#39;), sass = require(&#39;gulp-ruby-sass&#39;), autoprefixer = require(&#39;gulp-autoprefixer&#39;), minifycss = require(&#39;gulp-minify-css&#39;), jshint = require(&#39;gulp-jshint&#39;), uglify = require(&#39;gulp-uglify&#39;), rename = require(&#39;gulp-rename&#39;), concat = require(&#39;gulp-concat&#39;), imagemin = require(&#39;gulp-imagemin&#39;), livereload = require(&#39;gulp-livereload&#39;), cache = require(&#39;gulp-cache&#39;), notify = require(&#39;gulp-notify&#39;), del = require(&#39;del&#39;); // sass : $ gulp styles gulp.task(&#39;styles&#39;, function() { return gulp.src(&#39;src/styles/main.scss&#39;) .pipe(sass({ style: &#39;expanded&#39; })) .pipe(autoprefixer(&#39;last 2 version&#39;)) .pipe(gulp.dest(&#39;path/to/css&#39;)) .pipe(rename({suffix: &#39;.min&#39;})) .pipe(minifycss()) .pipe(gulp.dest(&#39;dist/assets/css&#39;)) .pipe(notify({ message: &#39;Styles task complete&#39; })); }); // JSHint : $ gulp scripts gulp.</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>//hmeng22.github.io/git/</link>
+      <pubDate>Mon, 24 Jul 2017 18:08:39 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/git/</guid>
+      <description>Git $ git --version --global setting $ git config --global user.name &amp;quot;yourusername&amp;quot; $ git config --global user.email &amp;quot;youremail&amp;quot; $ git config --list --init $ git init $ git clone url $ git log $ git reflog (any change update the HEAD)  --branch $ git branch -a $ git checkout -b newBranch $ git checkout branchNameSwitchingTo $ git branch -d branchNameDeleted $ git push origin branchNamePushed $ git merge branchNameMerged  --local $ git status $ git add .</description>
+    </item>
+    
+    <item>
+      <title>Caffe</title>
+      <link>//hmeng22.github.io/caffe/</link>
+      <pubDate>Fri, 21 Jul 2017 18:00:55 -0400</pubDate>
+      
+      <guid>//hmeng22.github.io/caffe/</guid>
+      <description>Caffe Caffe is a Deep Learning framework by Berkeley Vision and Learning Center(BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.
+Introduction You can go directly to Installation if you are already familiar with these stuff and just want to install Caffe.
+Caffe offers some installation instructions at here. However, I cannot install it successfully just following this instructions.</description>
+    </item>
+    
+  </channel>
+</rss>

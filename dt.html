@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Debounce and Throttle</title>
+</head>
+
+<body>
+  <h1>Mouse move inside the box...</h1>
+  <div id='mm' style="height: 200px; width: 400px; background-color: #838383;">
+    <h1>MouseMove:</h1>
+    <h1>Debounce:</h1>
+    <h1>Throttle:</h1>
+  </div>
+
+  <script type="text/javascript">
+    function debounce(func, wait) {
+      var timeout = null;
+      return function() {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          func.apply(context, args)
+        }, wait);
+      };
+    };
+
+    function throttle(func, wait) {
+      var last, timeout;
+      return function() {
+        let context = this;
+        let args = arguments;
+        var now = +new Date;
+
+        if (last && now < last + wait) {
+          clearTimeout(timeout);
+          timeout = setTimeout(function() {
+            last = now;
+            func.apply(context, args);
+          }, wait);
+        } else {
+          last = now;
+          func.apply(context, args);
+        };
+      }
+    }
+
+    var vp = 0;
+    var vd = 0;
+    var vt = 0;
+    var df = debounce(function() {
+      vd++;
+    }, 250, true);
+    var tf = throttle(function() {
+      vt++;
+    }, 250);
+
+    document.getElementById('mm').addEventListener('mousemove', function() {
+      df();
+      tf();
+      console.log('Mouse Move : ', vp++, '   Debounce : ', vd, '   Throttle : ', vt);
+      this.innerHTML = "<h1>MouseMove: " + vp + "</h1><h1>Debounce: " + vd + "</h1><h1>Throttle: " + vt + "</h1>";
+    });
+  </script>
+
+</body>
+
+</html>

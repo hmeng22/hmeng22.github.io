@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Intersection Observer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <h1>Intersection Observer API</h1>
+
+  <template id="boxTemplate">
+    <div class="box">
+      <div class="label topLeft"></div>
+      <div class="label topRight"></div>
+      <div class="label bottomLeft"></div>
+      <div class="label bottomRight"></div>
+    </div>
+  </template>
+
+  <div id="root">
+  </div>
+
+  <script type="text/javascript">
+    /*
+     * Thanks to
+     * https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+     */
+    let root = document.getElementById("root");
+
+    let observers = [];
+    let observerOptions = {
+      root: root,
+      rootMargin: "0px",
+      threshold: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    }
+
+    var positionTop = 0;
+    for (var i = 0; i < 20; i++) {
+      let template = document.getElementById("boxTemplate").content.cloneNode(true);
+      let box = template.querySelector(".box");
+      box.id = "box" + i;
+
+      var randomSize = Math.random() * 400;
+      randomSize = randomSize > 100 ? randomSize : 100;
+      box.style.width = randomSize + 'px';
+      box.style.height = randomSize + 'px';
+
+      positionTop += Math.random() * randomSize;
+      box.style.top = positionTop + 'px';
+      box.style.left = Math.random() * 80 + '%';
+      box.style.background = getRandomColor();
+
+      root.appendChild(document.importNode(template, true));
+
+      // Set up the observer for this box
+      observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+      observers[i].observe(document.querySelector('#' + box.id));
+    }
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function intersectionCallback(entries, observer) {
+      entries.forEach(function(entry) {
+        let box = entry.target;
+        let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+
+        box.querySelector(".topLeft").innerHTML = visiblePct;
+        box.querySelector(".topRight").innerHTML = visiblePct;
+        box.querySelector(".bottomLeft").innerHTML = visiblePct;
+        box.querySelector(".bottomRight").innerHTML = visiblePct;
+
+        box.style.background = getRandomColor();
+      });
+    };
+  </script>
+
+  <style media="screen">
+    body {
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+      text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+    }
+
+    #root {
+      position: fixed;
+      top: 50%;
+      width: 100%;
+      height: 500px;
+      transform: translate(0, -50%);
+      background-color: rgba(0, 0, 0, 0.3);
+      overflow: scroll;
+    }
+
+    .box {
+      position: absolute;
+    }
+
+    .label {
+      font: 14px "Open Sans", "Arial", sans-serif;
+      position: absolute;
+      margin: 0;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.7);
+      width: 3em;
+      height: 18px;
+      padding: 2px;
+      text-align: center;
+    }
+
+    .topLeft {
+      left: 2px;
+      top: 2px;
+    }
+
+    .topRight {
+      right: 2px;
+      top: 2px;
+    }
+
+    .bottomLeft {
+      bottom: 2px;
+      left: 2px;
+    }
+
+    .bottomRight {
+      bottom: 2px;
+      right: 2px;
+    }
+  </style>
+</body>
+
+</html>

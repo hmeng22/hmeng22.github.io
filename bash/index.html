@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bash | hmeng22</title>
+<link rel="stylesheet" href="//hmeng22.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="//hmeng22.github.io/"><h1 class="title is-4">hmeng22</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/hmeng22">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">July 27, 2018</h2>
+    <h1 class="title">Bash</h1>
+    <div class="content">
+      
+
+<h2 id="bash">Bash</h2>
+
+<pre><code># export PS1=&quot;[\#] \$ &quot;
+PS1变量可以使用的参数值有如下 :
+\d	日期weekday month date
+\H	完整主机名称
+\h	仅取主机的第一个名字
+\t	显示时间为24小时格式，如：HH：MM：SS
+\T	显示时间为12小时格式
+\A	显示时间为24小时格式：HH：MM
+\u	当前用户的账号名称
+\v	BASH的版本信息
+\w	完整的工作目录名称。家目录会以 ~代替
+\W	利用basename取得工作目录名称，所以只会列出最后一个目录
+\#	下达的第几个命令(应该是\\#)
+\$	提示字符，如果是root时，提示符为：# ，普通用户则为：$（应该是\\$）
+\[	字符&quot;[&quot;(应该是\\[)
+\]	字符&quot;]&quot;(应该是\\])
+\!	命令行动态统计历史命令次数(应该是\\!)
+</code></pre>
+
+<h2 id="command">Command</h2>
+
+<pre><code>cp -R dirA dirB
+rm -rf files
+
+更改文件权限 : chmod -R 755 file
+更改文件属组 : chown -R root:wheel dirA
+
+分页格式化显示文件内容 : pg file  
+分屏格式化显示文件内容 : more file
+
+查找文件 : find  
+显示文件类型 : file file
+
+显示文件前20行 : head -20 file  
+显示文件后20行 : tail -20 file  
+在文件中查找 : grep 
+
+统计文件字符数、词数和行数 : wc file  
+显示文件系统总空间和可用空间 : df  
+显示当前系统活动的总信息 : w  
+
+查看文件夹大小 : du -sh *
+
+查看系统信息 : uname -a  
+查询进程 : ps -ef | grep httpd
+
+压缩 : tar zcvpf filename.tar.gz /directoryPath  
+zip filename.zip /directoryPath/files
+
+找出特定的行 : grep
+把行拆分成多个字段 : awk
+更新插入删除等操作 : sed
+
+重定向复制和粘贴 : pbcopy 和 pbpaste (ls ~ | pbcopy &lt; content.txt)
+
+ls 命令 :
+只列出文件夹 : ls -l |grep ^d 或者 ls -d */
+列出所有文件夹和其中内容 : ls */
+
+multiple files :
+file[1-3].txt
+</code></pre>
+
+<h2 id="bash-programming">Bash Programming</h2>
+
+<pre><code class="language-bash">#!/bin/sh
+cd ~
+mkdir aDirectory
+cd aDirectory
+
+for ((i=0; i&lt;10; i++)); do
+    touch test_$i.txt
+done
+
+# 定义变量
+var = 1
+echo ${var}
+str = 'I am a string'
+str = &quot;hello, my number is \&quot;$var\&quot; \n&quot;
+echo ${#string}
+echo ${string:1:4}
+
+if ps -ef | grep httpd
+then
+	echo hello
+elif ps -ef | grep 
+	echo else
+fi
+
+for var in item1 item2 ... itemN
+do
+	echo ${var}
+done
+
+while condition (: = true)
+do
+	command
+done
+
+# 定义函数
+source ./function.sh or . ./function.sh
+</code></pre>
+
+<h2 id="tools">Tools</h2>
+
+<pre><code>显示路由表: netstat -nr
+追踪ip: traceroute xxx.xxx.xxx.xxx
+DNS域名解析:    host www.xxx.xxx
+
+
+reset launchpad
+defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+</code></pre>
+
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/hmeng22">hmeng22</a> 2017</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/markdown.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
