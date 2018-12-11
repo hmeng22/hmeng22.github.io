@@ -198,16 +198,5 @@ Tools Test Runner Karma is a browser test runner which creates a fake server to 
       <description>Git $ git --version --global setting $ git config --global user.name &amp;quot;yourusername&amp;quot; $ git config --global user.email &amp;quot;youremail&amp;quot; $ git config --list --init $ git init $ git clone url $ git log $ git reflog (any change update the HEAD)  --branch $ git branch -a $ git checkout -b newBranch $ git checkout branchNameSwitchingTo $ git branch -d branchNameDeleted $ git push origin branchNamePushed $ git merge branchNameMerged  --local $ git status $ git add .</description>
     </item>
     
-    <item>
-      <title>Caffe</title>
-      <link>//hmeng22.github.io/caffe/</link>
-      <pubDate>Fri, 21 Jul 2017 18:00:55 -0400</pubDate>
-      
-      <guid>//hmeng22.github.io/caffe/</guid>
-      <description>Caffe Caffe is a Deep Learning framework by Berkeley Vision and Learning Center(BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.
-Introduction You can go directly to Installation if you are already familiar with these stuff and just want to install Caffe.
-Caffe offers some installation instructions at here. However, I cannot install it successfully just following this instructions.</description>
-    </item>
-    
   </channel>
 </rss>
